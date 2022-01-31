@@ -18,7 +18,7 @@ project_dir="/path/to/the/project/dir"
 ver=`R --version | head -1 | cut -d' ' -f 3`
 libs_ver=libs_$ver
 
-cd $project_dir # the project directory manually set
+cd "$project_dir" # the project directory manually set
 if [ ! -d $libs_ver ]; then 
 	mkdir $libs_ver
 	echo R_LIBS_USER=\"$(pwd)/$libs_ver\" >> .Renviron
